@@ -22,7 +22,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 html {
   font-size: 62.5%;
@@ -156,7 +156,7 @@ main {
   margin-bottom: 5rem;
   line-height: 1.8rem;
   text-align: center;
-  color: #757575;
+  color: #666666;
 }
 
 /* Layout Horizontal - Tablas */
@@ -213,7 +213,7 @@ main {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.9rem;
-  color: var(--grey);
+  color: rgb(71, 71, 71);
   background-color: var(--just-white);
 }
 
@@ -313,7 +313,7 @@ main {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
-  color: #808080;
+  color: #bebebe;
 }
 
 /* Tarjeta beneficio - Contenido */
@@ -369,7 +369,7 @@ main {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
-  color: #808080;
+  color: #adadad;
 }
 
 /* BITCOIN IMAGE */
@@ -520,8 +520,10 @@ main {
 /* Estilo Plan Limitado One-Pay */
 
 .unlimited-card {
-  background-color: var(--warm-black);
-}
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 .unlimited-card .plan-card--call-to-action {
   background-color: var(--black);
 }
@@ -597,6 +599,11 @@ footer .left li {
 footer .left a {
   color: var(--just-white); 
   text-decoration: none;
+}
+
+footer .right img {
+  width: 4rem;
+  height: 4rem;
 }
 
 footer .right p {
