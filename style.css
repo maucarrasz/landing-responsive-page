@@ -1,0 +1,609 @@
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Model box) --> margin, border, padding, content
+3. Tippografía --> tipos, tamaños de fuente, etc
+4. Visuales --> box-shadow, border-radius, gradient, etc
+5. Otros
+*/
+
+:root {
+  /* Colores */
+  --bitcoin-orange: #F7931A;
+  --soft-orange: #FFE9D5;
+  --secundary-blue: #1A9AF7;
+  --soft-blue: #E7F5FF;
+  --warm-black: #201E1C;
+  --black: #282623;
+  --grey: #BABABA;
+  --off-white: #FAF8F7;
+  --just-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+/* HEADER */
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 32rem;
+  height: 33.4rem;
+  text-align: center;
+  background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%);
+}
+
+header img {
+  width: 15rem;
+  height: 2.4rem;
+  margin-top: 6rem;
+  align-self: center;
+}
+
+.header--title-container {
+  width: 90%;
+  min-width: 28.8rem;
+  max-width: 90rem;
+  height: 21.8rem;
+  margin-top: 4rem;
+  text-align: center;
+  align-self: center;
+}
+
+.header--title-container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+.header--title-container p {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--soft-orange);
+}
+
+.header--button {
+  position: absolute;
+  left: calc(50% - 11.45rem);
+  top: 27rem;
+  display: block;
+  margin-top: 3.5rem;
+  padding: 1.2rem 1.6rem;
+  width: 22.9rem;
+  height: 4.8rem;
+  background-color: var(--off-white);
+  box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--warm-black);
+  text-decoration: none;
+}
+.header--button span {
+  display: inline-block;
+  width: 1.3rem;
+  height: 0.8rem;
+  margin-left: 1.4rem;
+  background-image: url('./assets/icons/down-arrow.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* MAIN */
+
+main {
+  width: 100%;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+/* MAIN Exchange Container */
+
+.main-exchange-container {
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.main-exchange-container--title {
+  width: 90%;
+  min-width: 28.8rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.main-exchange-container .backgroundImg {
+  width: 19.5rem;
+  height: 19.5rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  background-image: url(./assets/img/Bitcoin.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-exchange-container--title h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  line-height: 2.6rem;
+  text-align: center;
+  color: var(--warm-black);
+}
+.main-exchange-container--title p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: #757575;
+}
+
+/* Layout Horizontal - Tablas */
+
+.main-table-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+
+
+/* Tabla Monedas y Tabla Comisiones*/
+.main-currency-table, .main-broker-table {
+  width: 70%;
+  scroll-snap-align: center;
+  min-width: 23rem;
+  max-width: 50rem;
+  height: 37rem;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.currency-table--title, .broker-table--title {
+  margin-bottom: 1.3rem;  
+  font-size: 1.8rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--bitcoin-orange);
+}
+.broker-table--title {
+  color: var(--secundary-blue);
+}
+
+
+.currency-table--container, .broker-table--container {
+  width: 90%;
+  min-width: 23rem;
+  max-width: 30rem;
+  height: 25rem;
+  margin: 0 auto;
+}
+
+.currency-table--container table, .broker-table--container table {
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table--container td, .broker-table--container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: var(--grey);
+  background-color: var(--just-white);
+}
+
+/* Bordes tablas */
+.table__top-left {
+  border-radius: 15px 0 0 0;
+}
+.table__top-right {
+  border-radius: 0 15px 0 0;
+}
+.table__bottom-right {
+  border-radius: 0 0 15px 0;
+}
+.table__bottom-left {
+  border-radius: 0 0 0 15px;
+}
+
+
+.table__right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+
+
+/* Currency Table - Flechas trending */
+.currency-table--container .trending-arrow {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;  
+}
+.currency-table--container .down {
+  background-image: url(./assets/icons/trending-down.svg);
+}
+.currency-table--container .up {
+  background-image: url(./assets/icons/trending-up.svg);
+}
+
+/* Fechas de Acualizacion - Tablas  */
+.currency-table--date, .broker-table--date {
+  width: 19rem;
+  height: 3rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background-color: var(--soft-orange);
+  border-radius: 8px;
+}
+.broker-table--date {
+  background-color: var(--soft-blue);
+}
+
+.currency-table--date p, .broker-table--date p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  color: var(--warm-black);
+}
+
+/* MAIN Lista Beneficios */
+
+.main-benefits-container {
+  width: 100%;
+  min-width: 32rem;
+  height: auto;
+  padding: 0 1rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  background-color: var(--warm-black);
+}
+
+
+.main-benefits-container--title {
+  width: 90%;
+  min-width: 28.8rem;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.main-benefits-container--title h2 {
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+.main-benefits-container--title p {
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+/* Tarjeta beneficio - Contenido */
+.product-detail--card {
+  text-align: left;
+  width: 90%;
+  min-width: 28rem;
+  max-width: 40rem;
+  min-height: 15rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background-color: var(--black);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+}
+
+/* Tarjeta beneficio - Iconos */
+.product-detail--card .icon-card {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-clock {
+  background-image: url(./assets/icons/clock.svg);
+}
+.icon-eye {
+  background-image: url(./assets/icons/eye.svg);
+}
+.icon-dollar {
+  background-image: url(./assets/icons/dollar-sign.svg);
+}
+.icon-check {
+  background-image: url(./assets/icons/check-circle.svg);
+}
+
+/* Tarjeta beneficio - Titulo */
+.product-detail--card .product-card--title {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+
+/* Tarjeta beneficio - Body */
+.product-detail--card .product-card--body {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+/* BITCOIN IMAGE */
+
+.bitcoin-image-container {
+  width: 100%;
+  min-width: 32rem;
+  height: 60vh;
+  background-image: url(./assets/img/bitcoinbaby2x.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bitcoin-image-container h2 {
+  text-align: center;
+  padding-top: 8vh;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+/* MAIN Planes */
+
+.main-plan-container {
+  width: 100%;
+  min-width: 32rem;
+  height: auto;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+.plans--title {
+  margin: 6rem 0;
+}
+
+.plans--title h2 {
+  margin-bottom: 2.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem; 
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  text-align: center;
+  color: var(--warm-black);
+}
+.plans--title p {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-align: center;
+  color: #757575;
+}
+
+/* Scroll Horizontal  */
+
+.plans-container--slider {
+  display: flex;
+  height: 32rem;
+  flex-direction: row;
+  overflow: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+
+.plans-container--card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 19rem;
+  max-width: 30rem;
+  height: 25rem;
+  margin: 5rem 1rem 0;
+  padding: 0 1.5rem;
+  background-color: var(--just-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+
+.plan-info-container {
+  padding: 3rem 0;
+}
+
+.plan-card--title {
+  padding-bottom: .3rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: black;
+}
+
+.plan-card--price {
+  padding-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 6.3rem;
+  color: black;
+  letter-spacing: -0.3rem;
+}
+.plan-card--price span{
+  vertical-align: 2rem;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.plan-card--saving {
+  padding: 0 .5rem;
+  padding-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #757575;
+}
+
+.plan-card--call-to-action {
+  width: 15rem;
+  height: 5rem;
+  text-align: center;
+  background-color: var(--off-white);
+  border: 2px solid var(--bitcoin-orange);
+  border-radius: 5px;
+}
+.plan-card--call-to-action a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--warm-black);
+  text-decoration: none;
+}
+.plan-card--call-to-action span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-top: .1rem;
+  background: url('./assets/icons/orange-right-arrow.svg') center/cover no-repeat;
+  vertical-align: text-bottom;
+}
+
+/* Estilo Plan Limitado One-Pay */
+
+.unlimited-card {
+  background-color: var(--warm-black);
+}
+.unlimited-card .plan-card--call-to-action {
+  background-color: var(--black);
+}
+
+.unlimited-card .plan-card--title, .unlimited-card .plan-card--price, .unlimited-card .plan-card--saving, .unlimited-card .plan-card--call-to-action a {
+  color: var(--just-white);
+}
+
+/* Estructura de todos los Cuadros */
+.recommended, .basic, .unlimited {
+  position: absolute;
+  display: flex;
+  width: 10rem;
+  height: 3rem;
+  left: calc(50% - 5rem);
+  top: -1.5rem;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Colores Cuadro-Recomendado */
+.recommended {
+  background-color: var(--bitcoin-orange);
+  color: var(--just-white);  
+}
+
+/* Colores Cuadro-Básico */
+.basic {
+  background-color: var(--secundary-blue);
+  color: var(--just-white);
+}
+
+/* Colores Cuadro-Limitado */
+.unlimited {
+  background-color: var(--black);
+  color: var(--just-white);
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  background-color: var(--bitcoin-orange);
+}
+
+
+footer section {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .left ul {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  list-style: none;
+}
+footer .left li {
+  margin: 1rem 0;
+}
+footer .left a {
+  color: var(--just-white); 
+  text-decoration: none;
+}
+
+footer .right p {
+  font-size: 0.8rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-align: center;
+  color: var(--soft-orange);
+}
