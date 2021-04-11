@@ -17,7 +17,7 @@
   --grey: #BABABA;
   --off-white: #FAF8F7;
   --just-white: #FFFFFF;
-}
+  }
 
 * {
   box-sizing: border-box;
@@ -517,7 +517,34 @@ main {
   vertical-align: text-bottom;
 }
 
-/* Estilo Plan Limitado One-Pay */
+/* Estilo Plan Basic */
+.basic-card {
+  background: #000046;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+.basic-card .plan-card--title, .basic-card .plan-card--price, .basic-card .plan-card--saving, .basic-card {
+  color: var(--just-white);
+}
+.basic-card .plan-card--call-to-action {
+  background-color: var(--just-white);
+}
+
+/* Estilo Plan Anual */
+.anual-card {
+  background: #f7b733;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffb31c, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+.anual-card .plan-card--title, .anual-card .plan-card--price, .anual-card .plan-card--saving, .anual-card {
+  color: var(--just-white);
+}
+.basic-card .plan-card--call-to-action {
+  background-color: var(--just-white);
+}
+
+
+/* Estilo Plan One-Pay */
 
 .unlimited-card {
   background: #000000;  /* fallback for old browsers */
@@ -525,10 +552,10 @@ main {
   background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 .unlimited-card .plan-card--call-to-action {
-  background-color: var(--black);
+  background-color: var(--just-white);
 }
 
-.unlimited-card .plan-card--title, .unlimited-card .plan-card--price, .unlimited-card .plan-card--saving, .unlimited-card .plan-card--call-to-action a {
+.unlimited-card .plan-card--title, .unlimited-card .plan-card--price, .unlimited-card .plan-card--saving, .unlimited-card .plan-card--call-to-action {
   color: var(--just-white);
 }
 
@@ -558,7 +585,7 @@ main {
 
 /* Colores Cuadro-Básico */
 .basic {
-  background-color: var(--secundary-blue);
+  background-color: #1CB5E0;
   color: var(--just-white);
 }
 
