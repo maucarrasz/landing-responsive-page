@@ -14,13 +14,16 @@ html {
   justify-content: center;
 }
 
+.bitcoin-image-container h2 {
+  font-size: 3.5rem;
+}
+
 footer {
   justify-content: space-between;
 }
 
 footer section {
   width: auto;
-  align-items: flex-start;
 }
 
 footer .left li {
@@ -29,11 +32,21 @@ footer .left li {
 
 footer .right {
   position: relative;
-  top: 3rem;
   right: 3rem;
-  transform: scale(1.1);  
 }
 
 footer .right img {
-  margin-left: 1rem;
+  margin-left: 0.6rem;
+  transform: scale(1.1);
+}
+footer .right p {
+  font-size: 1.1rem;
+}
+
+.author {
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - (21.8rem / 2));
+  color: #fff;
+  font-size: 1.4rem;
 }
