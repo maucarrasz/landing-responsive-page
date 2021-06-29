@@ -8,28 +8,27 @@
 
 :root {
   /* Colores */
-  --bitcoin-orange: #F7931A;
-  --soft-orange: #FFE9D5;
-  --secundary-blue: #1A9AF7;
-  --soft-blue: #E7F5FF;
-  --warm-black: #201E1C;
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secundary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #201e1c;
   --black: #282623;
-  --grey: #BABABA;
-  --off-white: #FAF8F7;
-  --just-white: #FFFFFF;
-  }
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #ffffff;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 html {
   font-size: 62.5%;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   scroll-behavior: smooth;
 }
-
 
 /* HEADER */
 
@@ -42,7 +41,11 @@ header {
   min-width: 32rem;
   height: 33.4rem;
   text-align: center;
-  background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%);
+  background: linear-gradient(
+    207.8deg,
+    var(--warm-black) 16.69%,
+    var(--bitcoin-orange) 100%
+  );
 }
 
 header img {
@@ -100,7 +103,7 @@ header img {
   width: 1.3rem;
   height: 0.8rem;
   margin-left: 1.4rem;
-  background-image: url('./assets/icons/down-arrow.svg');
+  background-image: url("./assets/icons/down-arrow.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -169,23 +172,23 @@ main {
   scroll-snap-type: x mandatory;
 }
 
-
-
 /* Tabla Monedas y Tabla Comisiones*/
-.main-currency-table, .main-broker-table {
+.main-currency-table,
+.main-broker-table {
   width: 70%;
   scroll-snap-align: center;
   min-width: 23rem;
   max-width: 50rem;
   height: 37rem;
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-.currency-table--title, .broker-table--title {
-  margin-bottom: 1.3rem;  
+.currency-table--title,
+.broker-table--title {
+  margin-bottom: 1.3rem;
   font-size: 1.8rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: bold;
   line-height: 2.3rem;
   color: var(--bitcoin-orange);
@@ -194,8 +197,8 @@ main {
   color: var(--secundary-blue);
 }
 
-
-.currency-table--container, .broker-table--container {
+.currency-table--container,
+.broker-table--container {
   width: 90%;
   min-width: 23rem;
   max-width: 30rem;
@@ -203,12 +206,14 @@ main {
   margin: 0 auto;
 }
 
-.currency-table--container table, .broker-table--container table {
+.currency-table--container table,
+.broker-table--container table {
   width: 100%;
   height: 100%;
 }
 
-.currency-table--container td, .broker-table--container td {
+.currency-table--container td,
+.broker-table--container td {
   width: 50%;
   font-size: 1.6rem;
   font-weight: 500;
@@ -231,14 +236,12 @@ main {
   border-radius: 0 0 0 15px;
 }
 
-
 .table__right {
   font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.7rem;
   color: #757575;
 }
-
 
 /* Currency Table - Flechas trending */
 .currency-table--container .trending-arrow {
@@ -248,7 +251,7 @@ main {
   margin-left: 1rem;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
 .currency-table--container .down {
   background-image: url(./assets/icons/trending-down.svg);
@@ -258,7 +261,8 @@ main {
 }
 
 /* Fechas de Acualizacion - Tablas  */
-.currency-table--date, .broker-table--date {
+.currency-table--date,
+.broker-table--date {
   width: 19rem;
   height: 3rem;
   margin: 0 auto;
@@ -271,7 +275,8 @@ main {
   background-color: var(--soft-blue);
 }
 
-.currency-table--date p, .broker-table--date p {
+.currency-table--date p,
+.broker-table--date p {
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: normal;
@@ -287,11 +292,10 @@ main {
   padding: 0 1rem;
   padding-top: 3rem;
   padding-bottom: 2.5rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   text-align: center;
   background-color: var(--warm-black);
 }
-
 
 .main-benefits-container--title {
   width: 90%;
@@ -403,13 +407,13 @@ main {
 }
 
 .plans--title {
-  margin: 6rem 0;
+  padding: 6rem 0;
 }
 
 .plans--title h2 {
   margin-bottom: 2.5rem;
   margin-right: 1.5rem;
-  margin-left: 1.5rem; 
+  margin-left: 1.5rem;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 2.6rem;
@@ -438,7 +442,6 @@ main {
   scroll-snap-type: x mandatory;
 }
 
-
 .plans-container--card {
   position: relative;
   scroll-snap-align: center;
@@ -453,43 +456,42 @@ main {
   box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
 
-
 .plan-info-container {
   padding: 3rem 0;
 }
 
 .plan-card--title {
-  padding-bottom: .3rem;
+  padding-bottom: 0.3rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
-  color: black;
+  color: var(--just-white);
 }
 
 .plan-card--price {
   padding-bottom: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 5.2rem;
   font-weight: 700;
   line-height: 6.3rem;
-  color: black;
+  color: var(--just-white);
   letter-spacing: -0.3rem;
 }
-.plan-card--price span{
+.plan-card--price span {
   vertical-align: 2rem;
   font-size: 1.2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
 }
 
 .plan-card--saving {
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   padding-bottom: 1.5rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.5rem;
-  color: #757575;
+  color: var(--just-white);
 }
 
 .plan-card--call-to-action {
@@ -500,8 +502,8 @@ main {
   border: 2px solid var(--bitcoin-orange);
   border-radius: 5px;
 }
-.plan-card--call-to-action a {
-  font-family: 'DM Sans', sans-serif;
+.plan-card--call-to-action p {
+  font-family: "DM Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.8rem;
@@ -512,55 +514,72 @@ main {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  margin-top: .1rem;
-  background: url('./assets/icons/orange-right-arrow.svg') center/cover no-repeat;
+  margin-top: 0.1rem;
+  background: url("./assets/icons/orange-right-arrow.svg") center/cover
+    no-repeat;
   vertical-align: text-bottom;
+}
+
+.plan-card--call-to-action:hover {
+  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.plan-card--call-to-action:hover p {
+  color: var(--just-white);
 }
 
 /* Estilo Plan Basic */
 .basic-card {
-  background: #000046;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-}
-.basic-card .plan-card--title, .basic-card .plan-card--price, .basic-card .plan-card--saving, .basic-card {
-  color: var(--just-white);
-}
-.basic-card .plan-card--call-to-action {
-  background-color: var(--just-white);
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1cb5e0,
+    #000046
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1cb5e0,
+    #000046
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Estilo Plan Anual */
 .anual-card {
-  background: #f7b733;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffb31c, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-.anual-card .plan-card--title, .anual-card .plan-card--price, .anual-card .plan-card--saving, .anual-card {
-  color: var(--just-white);
+  background: #f7b733; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f7b733,
+    #fc4a1a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffb31c,
+    #fc4a1a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.basic-card .plan-card--call-to-action {
-  background-color: var(--just-white);
-}
-
 
 /* Estilo Plan One-Pay */
 
 .unlimited-card {
-  background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
-.unlimited-card .plan-card--call-to-action {
-  background-color: var(--just-white);
-}
-
-.unlimited-card .plan-card--title, .unlimited-card .plan-card--price, .unlimited-card .plan-card--saving, .unlimited-card .plan-card--call-to-action {
-  color: var(--just-white);
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Estructura de todos los Cuadros */
-.recommended, .basic, .unlimited {
+.recommended,
+.basic,
+.unlimited {
   position: absolute;
   display: flex;
   width: 10rem;
@@ -569,7 +588,7 @@ main {
   top: -1.5rem;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.4rem;
@@ -580,12 +599,12 @@ main {
 /* Colores Cuadro-Recomendado */
 .recommended {
   background-color: var(--bitcoin-orange);
-  color: var(--just-white);  
+  color: var(--just-white);
 }
 
 /* Colores Cuadro-Básico */
 .basic {
-  background-color: #1CB5E0;
+  background-color: #1cb5e0;
   color: var(--just-white);
 }
 
@@ -599,11 +618,11 @@ main {
 
 footer {
   display: flex;
+  position: relative;
   width: 100%;
   height: 15rem;
   background-color: var(--bitcoin-orange);
 }
-
 
 footer section {
   display: flex;
@@ -613,8 +632,16 @@ footer section {
   align-items: center;
 }
 
+footer a {
+  color: var(--just-white);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
 footer .left ul {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
@@ -622,10 +649,6 @@ footer .left ul {
 }
 footer .left li {
   margin: 1rem 0;
-}
-footer .left a {
-  color: var(--just-white); 
-  text-decoration: none;
 }
 
 footer .right img {
@@ -635,9 +658,26 @@ footer .right img {
 
 footer .right p {
   font-size: 0.8rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   line-height: 1.8rem;
   text-align: center;
   color: var(--soft-orange);
+}
+
+.author {
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - (21.8rem / 2));
+  color: #fff;
+  font-size: 1.4rem;
+}
+.author a {
+  color: #fff;
+  text-decoration: none;
+}
+.author a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
 }
