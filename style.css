@@ -20,6 +20,7 @@
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -34,13 +35,25 @@ html {
 
 header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   min-width: 32rem;
   height: 33.4rem;
   text-align: center;
+  background: -o-linear-gradient(
+    242.2deg,
+    var(--warm-black) 16.69%,
+    var(--bitcoin-orange) 100%
+  );
   background: linear-gradient(
     207.8deg,
     var(--warm-black) 16.69%,
@@ -52,6 +65,8 @@ header img {
   width: 15rem;
   height: 2.4rem;
   margin-top: 6rem;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
@@ -62,6 +77,8 @@ header img {
   height: 21.8rem;
   margin-top: 4rem;
   text-align: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
@@ -91,6 +108,7 @@ header img {
   width: 22.9rem;
   height: 4.8rem;
   background-color: var(--off-white);
+  -webkit-box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
   box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
   border-radius: 0.4rem;
   font-size: 1.4rem;
@@ -166,10 +184,13 @@ main {
 /* Layout Horizontal - Tablas */
 
 .main-table-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
 }
 
@@ -331,6 +352,7 @@ main {
   margin: 1.5rem auto;
   padding: 1.5rem;
   background-color: var(--black);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
   border-radius: 6px;
 }
@@ -434,12 +456,18 @@ main {
 /* Scroll Horizontal  */
 
 .plans-container--slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 32rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   overflow: auto;
   overflow-y: hidden;
   overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
 }
 
@@ -454,6 +482,7 @@ main {
   padding: 0 1.5rem;
   background-color: var(--just-white);
   border-radius: 8px;
+  -webkit-box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
   box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
 
@@ -533,12 +562,15 @@ main {
 
 /* Estilo Plan Basic */
 .basic-card {
-  background: #000046; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #1cb5e0,
-    #000046
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #000046; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#1cb5e0),
+    to(#000046)
+  );
+  background: -o-linear-gradient(left, #1cb5e0, #000046);
   background: linear-gradient(
     to right,
     #1cb5e0,
@@ -548,12 +580,15 @@ main {
 
 /* Estilo Plan Anual */
 .anual-card {
-  background: #f7b733; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f7b733,
-    #fc4a1a
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #f7b733; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffb31c),
+    to(#fc4a1a)
+  );
+  background: -o-linear-gradient(left, #ffb31c, #fc4a1a);
   background: linear-gradient(
     to right,
     #ffb31c,
@@ -564,12 +599,15 @@ main {
 /* Estilo Plan One-Pay */
 
 .unlimited-card {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #000000; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#434343),
+    to(#000000)
+  );
+  background: -o-linear-gradient(left, #434343, #000000);
   background: linear-gradient(
     to right,
     #434343,
@@ -582,12 +620,18 @@ main {
 .basic,
 .unlimited {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 10rem;
   height: 3rem;
   left: calc(50% - 5rem);
   top: -1.5rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-family: "Inter", sans-serif;
   font-size: 1.2rem;
@@ -618,6 +662,8 @@ main {
 /* FOOTER */
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 100%;
@@ -626,10 +672,19 @@ footer {
 }
 
 footer section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
