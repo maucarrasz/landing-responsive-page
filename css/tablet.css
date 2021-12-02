@@ -46,7 +46,7 @@ footer .right p {
 .author {
   position: absolute;
   bottom: 5px;
-  left: calc(50% - (21.8rem / 2));
+  left: calc(50% - 11rem);
   color: #fff;
   font-size: 1.4rem;
 }
