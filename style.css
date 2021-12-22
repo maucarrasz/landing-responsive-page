@@ -100,7 +100,7 @@ header img {
 
 .header--button {
   position: absolute;
-  left: calc(50% - 11.45rem);
+  left: calc(50% - 11.5rem);
   top: 27rem;
   display: block;
   margin-top: 3.5rem;
@@ -132,7 +132,6 @@ header img {
 main {
   width: 100%;
   height: auto;
-  /* height: calc(100vh - (33.4rem + 15rem)); */
   background-color: var(--off-white);
 }
 
